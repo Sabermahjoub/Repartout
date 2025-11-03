@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RéparTout App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+        }
+
+        .logo h1 {
+            color: #667eea;
+            font-size: 1.8rem;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-box h4 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🔧</span>
+                <div>
+                    <h1>RéparTout</h1>
+                    <p>Système de Gestion des Réparations</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#accueil">Accueil</a>
+                <a href="/repartout-ws/clients">Clients</a>
+                <a href="/repartout-ws/machines">Machines</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hero">
+                <h2>Bienvenue sur RéparTout</h2>
+                <p>Gérez les demandes de réparation en toute simplicité</p>
+            </div>
+
+		<div class="cards">
+		  <div class="card">
+		    <div class="card-icon">📝</div>
+		    <h3>Nouvelle Demande</h3>
+		    <p>Créez facilement une nouvelle demande de réparation. Décrivez le problème rencontré, envoyez-la en ligne et suivez son traitement étape par étape.</p>
+<a href="/repartout-ws/interventions?action=new" class="btn">Créer une demande</a>		  </div>
+		
+		  <div class="card">
+		    <div class="card-icon">💻</div>
+		    <h3>Gestion des Machines</h3>
+		    <p>Accédez à la liste complète des machines, ajoutez-en de nouvelles, mettez à jour leurs informations ou supprimez celles qui ne sont plus utilisées.</p>
+		    <a href="/repartout-ws/machines" class="btn">Gérer les machines</a>
+		  </div>
+		
+		  <div class="card">
+		    <div class="card-icon">👤</div>
+		    <h3>Gestion des Clients</h3>
+		    <p>Consultez la liste des clients, ajoutez-en de nouveaux, modifiez leurs coordonnées ou supprimez ceux qui ne sont plus actifs dans votre système.</p>
+		    <a href="/repartout-ws/clients" class="btn">Gérer les clients</a>
+		  </div>
+		</div>
+
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h4>247</h4>
+                    <p>Demandes traitées</p>
+                </div>
+                <div class="stat-box">
+                    <h4>98%</h4>
+                    <p>Satisfaction client</p>
+                </div>
+                <div class="stat-box">
+                    <h4>24h</h4>
+                    <p>Délai moyen de réponse</p>
+                </div>
+                <div class="stat-box">
+                    <h4>150+</h4>
+                    <p>Clients actifs</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RéparTout - Tous droits réservés | Apache Tomcat 10.1.48</p>
+    </footer>
+</body>
+</html>
