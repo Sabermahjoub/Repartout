@@ -1,0 +1,25 @@
+{
+  "protocol": "Telediag-2.1",
+  "timestamp": 1761386700000,
+  "equipment": {
+    "name": "Imprimante HP LaserJet Pro M404",
+    "location": "Service comptabilité",
+    "serialNumber": "SN987654"
+  },
+  "eventType": "FAULT",
+  "severity": "LOW",
+  "status": "ACTIVE",
+  "fault": {
+    "code": "ERR-PAPER-003",
+    "description": "Problème d'alimentation papier - bourrage fréquent",
+    "detectedBy": "Capteur papier tray-1",
+    "suggestedActions": [
+      "Vérifier le chemin papier",
+      "Nettoyer les rouleaux",
+      "Changer le papier si nécessaire"
+    ]
+  },
+  "reportedBy": {
+    "source": "system"
+  }
+}

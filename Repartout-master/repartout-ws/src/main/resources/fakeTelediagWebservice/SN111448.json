@@ -1,0 +1,31 @@
+{
+  "protocol": "Telediag-2.1",
+  "timestamp": 1761386800000,
+  "equipment": {
+    "name": "Photocopieur Canon ImageRunner 2525",
+    "location": "Service administratif",
+    "serialNumber": "SN111448"
+  },
+  "eventType": "FAULT",
+  "severity": "HIGH",
+  "status": "ACTIVE",
+  "fault": {
+    "code": "ERR-SCANNER-007",
+    "description": "Défaillance du module scanner - calibration impossible",
+    "detectedBy": "Capteur de position scanner",
+    "suggestedActions": [
+      "Redémarrer le module scanner",
+      "Vérifier les câbles de connexion",
+      "Lancer la procédure de calibration manuelle",
+      "Contacter le support technique si l'erreur persiste"
+    ]
+  },
+  "reportedBy": {
+    "source": "system"
+  },
+  "additionalInfo": {
+    "scanCount": 125487,
+    "lastMaintenance": "2023-09-15",
+    "nextMaintenanceDue": "2024-03-15"
+  }
+}

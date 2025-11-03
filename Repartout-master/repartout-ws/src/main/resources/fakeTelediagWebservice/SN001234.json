@@ -1,0 +1,25 @@
+{
+  "protocol": "Telediag-2.1",
+  "timestamp": 1761386600000,
+  "equipment": {
+    "name": "Ordinateur portable Dell Latitude 5520",
+    "location": "Bureau directeur",
+    "serialNumber": "SN001234"
+  },
+  "eventType": "FAULT",
+  "severity": "MEDIUM",
+  "status": "ACTIVE",
+  "fault": {
+    "code": "ERR-OVERHEAT-001",
+    "description": "Surchauffe processeur - température critique atteinte",
+    "detectedBy": "Capteur thermique CPU",
+    "suggestedActions": [
+      "Nettoyer les ventilateurs",
+      "Vérifier la pâte thermique",
+      "Redémarrer le système"
+    ]
+  },
+  "reportedBy": {
+    "source": "system"
+  }
+}
